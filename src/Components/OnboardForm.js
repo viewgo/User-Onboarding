@@ -30,7 +30,7 @@ function OnboardForm({ values, errors, touched, status }) {
         </label>
         <button type="submit">Submit!</button>
       </Form>
-      
+
 {/* CHECK TO SEE IF USERS EXIST BEFORE PUTTING AN H2 */}
         {user && user.length ? <h2>Users</h2> : <></>}
       <div className="users-list">
