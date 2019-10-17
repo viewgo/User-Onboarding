@@ -1,10 +1,11 @@
-body{
+body {
   background-color: #222831;
   color: #eeeeee;
 }
 
 .App {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -12,7 +13,7 @@ body{
   text-align: center;
 }
 
-Form{
+form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -22,34 +23,32 @@ Form{
   margin-bottom: 2rem;
 }
 
-.form-inputs{
+.form-inputs {
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
 
-
-label{
-  padding: .5rem;
-  width: 300px;
-  
-}
-
-.form-inputs input{
-  background-color: #393e46;
-  border: 0px;
-  padding: .5rem;
-  color: #eeeeee;
-  margin: .5rem;
+label {
+  padding: 0.5rem;
   width: 300px;
 }
 
-select{
+.form-inputs input {
   background-color: #393e46;
   border: 0px;
-  padding: .5rem;
+  padding: 0.5rem;
   color: #eeeeee;
-  margin: .5rem;
+  margin: 0.5rem;
+  width: 300px;
+}
+
+select {
+  background-color: #393e46;
+  border: 0px;
+  padding: 0.5rem;
+  color: #eeeeee;
+  margin: 0.5rem;
   width: 185px;
 }
 
@@ -57,7 +56,7 @@ select-selected {
   background-color: DodgerBlue;
 }
 
-form button{
+form button {
   /* color: #eeeeee;
   width: 185px;
   border: 0;
@@ -68,18 +67,75 @@ form button{
   color: #eeeeee;
   width: 185px;
   border: 0;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   background-color: #d65a31;
 }
 
-button:active{
+button:active {
 }
 
-button:hover{
+button:hover {
 }
 
-
-button:focus{
+button:focus {
   outline: 0;
+}
+
+.users-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.user-card {
+  /* border: 1px solid red; */
+  width: 25%;
+  background-color: #393e46;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 -1px 0 #d65a31, 0 0 5px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.user-card .user-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-info p:first-child {
+  width: 30%;
+  text-align: end;
+}
+
+.user-info p:last-child {
+  width: 60%;
+  text-align: start;
+}
+
+@media (max-width: 1200px) {
+  .user-card {
+    /* border: 1px solid red; */
+    width: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .user-card {
+    /* border: 1px solid red; */
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .user-card {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
 }

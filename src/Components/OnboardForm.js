@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import Users from "./Users";
 
 function OnboardForm({ values, errors, touched, status }) {
   const [user, setUser] = useState([]);
@@ -29,15 +30,14 @@ function OnboardForm({ values, errors, touched, status }) {
         </label>
         <button type="submit">Submit!</button>
       </Form>
-
-      <div className="user-card">
-      {user.map(element => (
-        <ul key={element.id}>
-          <li>Name: {element.name}</li>
-          <li>Email: {element.email}</li>
-          <li>Password: {element.password}</li>
-        </ul>
-      ))}
+      
+{/* CHECK TO SEE IF USERS EXIST BEFORE PUTTING AN H2 */}
+        {user && user.length ? <h2>Users</h2> : <></>}
+      <div className="users-list">
+        
+        {user.map((element, index) => (
+          <Users key={index} user={element} />
+        ))}
       </div>
     </>
   );
@@ -49,7 +49,7 @@ const FormikOnboardForm = withFormik({
       name: name || "",
       email: email || "",
       password: password || "",
-      tos: tos || false
+      tos: tos || true
     };
   },
 
