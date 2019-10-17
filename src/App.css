@@ -1,0 +1,85 @@
+body{
+  background-color: #222831;
+  color: #eeeeee;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+Form{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.form-inputs{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+
+label{
+  padding: .5rem;
+  width: 300px;
+  
+}
+
+.form-inputs input{
+  background-color: #393e46;
+  border: 0px;
+  padding: .5rem;
+  color: #eeeeee;
+  margin: .5rem;
+  width: 300px;
+}
+
+select{
+  background-color: #393e46;
+  border: 0px;
+  padding: .5rem;
+  color: #eeeeee;
+  margin: .5rem;
+  width: 185px;
+}
+
+select-selected {
+  background-color: DodgerBlue;
+}
+
+form button{
+  /* color: #eeeeee;
+  width: 185px;
+  border: 0;
+  margin: .5rem;
+  padding: .5rem;
+  background-color: #393e46;
+  border: 1px solid #393e46; */
+  color: #eeeeee;
+  width: 185px;
+  border: 0;
+  margin: .5rem;
+  padding: .5rem;
+  background-color: #d65a31;
+}
+
+button:active{
+}
+
+button:hover{
+}
+
+
+button:focus{
+  outline: 0;
+}
